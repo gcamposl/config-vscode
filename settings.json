@@ -5,10 +5,11 @@
     "dist": true,
     "*/.pyc": true,
     ".nyc_output": true,
+    ".DS_Store": true,
     "obj": true,
     "bin": true,
-    "**/_pycache_": true,
     "**/.DS_Store": true,
+    "**/_pycache_": true,
     "**/node_modules": true,
     ".vscode-test": false,
     ".vscode test": false,
@@ -35,7 +36,7 @@
   "python.formatting.provider": "black",
   "python.sortImports.args": ["--profile", "black"],
   "python.linting.mypyEnabled": true,
-  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Enabled": false,
   "python.testing.unittestEnabled": true,
   "python.linting.pylintEnabled": false,
   "python.languageServer": "Pylance",
@@ -69,7 +70,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-
+  
   // YAML
   "[YAML]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -114,7 +115,10 @@
     "migrations": "tools",
     "modules": "components",
     "implementations": "core",
-    "dtos": "typescript",
+    "dtos": "python",
+    "dto": "python",
+    "dao": "python",
+    "daos": "python",
     "fakes": "mock",
     "websockets": "pipe",
     "protos": "pipe",
@@ -128,7 +132,7 @@
     "eslint-config": "tools",
     "kube": "kubernetes"
   },
-
-  // folder tree
+  
   "explorer.compactFolders": false,
+  "window.zoomLevel": -0.75
 }
