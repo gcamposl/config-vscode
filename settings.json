@@ -5,10 +5,8 @@
     "dist": true,
     "*/.pyc": true,
     ".nyc_output": true,
-    ".DS_Store": true,
     "obj": true,
     "bin": true,
-    "**/.DS_Store": true,
     "**/_pycache_": true,
     "**/node_modules": true,
     ".vscode-test": false,
@@ -52,17 +50,32 @@
 
   // typescript
   "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled" : "never",
+  "typescript.suggest.autoImports" : true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "typescript.tsserver.log" : "off",
+  "files.associations" : {
+    ".sequelizerc" : "javascript",
+    ".stylelintrc" : "json",
+    "*.tsx" : "typescriptreact",
+    ".env.*" : "dotenv",
+    ".prettierrc" : "json"
+  },
 
   // javascript
   "javascript.preferences.quoteStyle": "single",
+  "javascript.suggest.autoImports" : true,
+  "javascript.updateImportsOnFileMove.enabled" : "always",
   "debug.javascript.usePreview": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
+  },
+  "emmet.syntaxProfiles" : {
+    "javascript" : "jsx"
   },
 
   //JSON
@@ -70,7 +83,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  
+
   // YAML
   "[YAML]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -102,6 +115,7 @@
   },
 
   // material icons theme
+  "material-icon-theme.activeIconPack" : "nest",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.associations": {
     "infra": "app",
@@ -117,8 +131,8 @@
     "implementations": "core",
     "dtos": "python",
     "dto": "python",
-    "dao": "python",
     "daos": "python",
+    "dao": "python",
     "fakes": "mock",
     "websockets": "pipe",
     "protos": "pipe",
@@ -132,7 +146,10 @@
     "eslint-config": "tools",
     "kube": "kubernetes"
   },
-  
   "explorer.compactFolders": false,
-  "window.zoomLevel": -0.75
+  "window.zoomLevel": -0.5,
+
+  "extensions.ignoreRecommendations" : true,
+  "editor.suggestSelection" : "first",
+  "editor.tabSize" : 4
 }
