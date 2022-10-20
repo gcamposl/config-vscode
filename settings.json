@@ -2,16 +2,16 @@
   // files exlude
   "files.exclude": {
     "out": true, // set this to true to hide the "out" folder with the compiled JS files
-    "dist": true,
-    "*/.pyc": true,
-    ".nyc_output": true,
-    "obj": true,
-    "bin": true,
-    "**/_pycache_": true,
-    "**/node_modules": true,
+    "dist": false,
+    "*/.pyc": false,
+    ".nyc_output": false,
+    "obj": false,
+    "bin": false,
+    "**/_pycache_": false,
+    "**/node_modules": false,
     ".vscode-test": false,
     ".vscode test": false,
-    "*/.mypy_cache/*": true
+    "*/.mypy_cache/*": false
   },
 
   // searchs exlude
@@ -29,6 +29,16 @@
   "code-runner.ignoreSelection": true,
   "code-runner.runInTerminal": true,
 
+  // csharp
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "csharp.format.enable": true,
+  "[csharp]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+  },
+
   // python
   "python.linting.enabled": false,
   "python.formatting.provider": "black",
@@ -39,49 +49,54 @@
   "python.linting.pylintEnabled": false,
   "python.languageServer": "Pylance",
   "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+    "source.organizeImports": true
     }
   },
   "python.linting.flake8Args": [
-      // Match what black does.
-      "--max-line-length=90"
+    // Match what black does.
+    "--max-line-length=90"
   ],
 
   // typescript
   "typescript.preferences.quoteStyle": "single",
-  "typescript.updateImportsOnFileMove.enabled" : "never",
-  "typescript.suggest.autoImports" : true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.suggest.autoImports": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "typescript.tsserver.log" : "off",
-  "files.associations" : {
-    ".sequelizerc" : "javascript",
-    ".stylelintrc" : "json",
-    "*.tsx" : "typescriptreact",
-    ".env.*" : "dotenv",
-    ".prettierrc" : "json"
+  "typescript.tsserver.log": "off",
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    "*.tsx": "typescriptreact",
+    ".env.*": "dotenv",
+    ".prettierrc": "json"
   },
 
   // javascript
   "javascript.preferences.quoteStyle": "single",
-  "javascript.suggest.autoImports" : true,
-  "javascript.updateImportsOnFileMove.enabled" : "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "debug.javascript.usePreview": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "emmet.syntaxProfiles" : {
-    "javascript" : "jsx"
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
   },
 
   //JSON
   "[JSON]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
   },
 
   // YAML
@@ -93,14 +108,14 @@
   // terminal and workbench
   "terminal.integrated.fontSize": 14,
   "workbench.startupEditor": "newUntitledFile",
-  
-  // fonts 
+
+  // fonts
   "editor.accessibilitySupport": "off",
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.lineHeight": 26,
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": false,
-  
+  // "editor.fontFamily": "JetBrains Mono",
+  // "editor.fontLigatures": false,
+
   // semantic highlighting
   "editor.semanticHighlighting.enabled": true,
 
@@ -111,12 +126,11 @@
   "prettier.printWidth": 120,
   "prettier.singleQuote": true,
   "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+    "source.fixAll.eslint": true
   },
 
   // material icons theme
-  "material-icon-theme.activeIconPack" : "nest",
-  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.folders.associations": {
     "infra": "app",
     "entities": "class",
@@ -129,10 +143,10 @@
     "migrations": "tools",
     "modules": "components",
     "implementations": "core",
-    "dtos": "python",
-    "dto": "python",
-    "daos": "python",
-    "dao": "python",
+    "dtos": "typescript",
+    "dto": "typescript",
+    "daos": "typescript",
+    "dao": "typescript",
     "fakes": "mock",
     "websockets": "pipe",
     "protos": "pipe",
@@ -147,9 +161,11 @@
     "kube": "kubernetes"
   },
   "explorer.compactFolders": false,
-  "window.zoomLevel": -0.5,
 
-  "extensions.ignoreRecommendations" : true,
-  "editor.suggestSelection" : "first",
-  "editor.tabSize" : 4
+  "extensions.ignoreRecommendations": true,
+  "editor.suggestSelection": "first",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.bracketPairColorization.enabled": true,
+  "omnisharp.enableImportCompletion": true,
+  "window.zoomLevel": -1
 }
