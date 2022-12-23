@@ -38,11 +38,11 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
   },
-
+  "dotnet-test-explorer.enableTelemetry": false,
+  
   // python
   "python.linting.enabled": false,
   "python.formatting.provider": "black",
-  "python.sortImports.args": ["--profile", "black"],
   "python.linting.mypyEnabled": true,
   "python.linting.flake8Enabled": false,
   "python.testing.unittestEnabled": true,
@@ -66,7 +66,8 @@
   "typescript.suggest.autoImports": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   },
   "typescript.tsserver.log": "off",
   "files.associations": {
@@ -84,7 +85,8 @@
   "debug.javascript.usePreview": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
@@ -143,10 +145,10 @@
     "migrations": "tools",
     "modules": "components",
     "implementations": "core",
-    "dtos": "typescript",
-    "dto": "typescript",
-    "daos": "typescript",
-    "dao": "typescript",
+    // "dtos": "typescript",
+    // "dto": "typescript",
+    // "daos": "typescript",
+    // "dao": "typescript",
     "fakes": "mock",
     "websockets": "pipe",
     "protos": "pipe",
@@ -164,8 +166,8 @@
 
   "extensions.ignoreRecommendations": true,
   "editor.suggestSelection": "first",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.bracketPairColorization.enabled": true,
   "omnisharp.enableImportCompletion": true,
+  "workbench.iconTheme": "material-icon-theme",
   "window.zoomLevel": -1
 }
