@@ -25,21 +25,15 @@
     ".vscode test": true
   },
 
-  // code runner
-  "code-runner.ignoreSelection": true,
-  "code-runner.runInTerminal": true,
-
   // csharp
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // "csharp.format.enable": true,
   "[csharp]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-dotnettools.csharp",
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": false
   },
-  "dotnet-test-explorer.enableTelemetry": false,
-  
+
   // python
   "python.linting.enabled": false,
   "python.formatting.provider": "black",
@@ -52,8 +46,9 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-    }
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnType": true
   },
   "python.linting.flake8Args": [
     // Match what black does.
@@ -82,7 +77,6 @@
   "javascript.preferences.quoteStyle": "single",
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "debug.javascript.usePreview": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -92,12 +86,23 @@
     "javascript": "jsx"
   },
 
+  // GO
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+  },
+  "go.testOnSave": true,
+  "go.lintOnSave": "package",
+  "go.formatTool": "goimports",
+
   //JSON
   "[JSON]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit"
     }
   },
 
@@ -115,59 +120,27 @@
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 16,
   "editor.lineHeight": 26,
-  // "editor.fontFamily": "JetBrains Mono",
-  // "editor.fontLigatures": false,
-
+  
   // semantic highlighting
   "editor.semanticHighlighting.enabled": true,
 
-  // anything
-  "audioCues.lineHasError": "off",
-
   // format JS and TS
-  "prettier.printWidth": 120,
-  "prettier.singleQuote": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
 
-  // material icons theme
-  "material-icon-theme.activeIconPack": "nest",
-  "material-icon-theme.folders.associations": {
-    "infra": "app",
-    "entities": "class",
-    "domain": "class",
-    "schemas": "class",
-    "typeorm": "database",
-    "repositories": "mappings",
-    "repository": "mappings",
-    "http": "container",
-    "migrations": "tools",
-    "modules": "components",
-    "implementations": "core",
-    // "dtos": "typescript",
-    // "dto": "typescript",
-    // "daos": "typescript",
-    // "dao": "typescript",
-    "fakes": "mock",
-    "websockets": "pipe",
-    "protos": "pipe",
-    "grpc": "pipe",
-    "providers": "include",
-    "subscribers": "messages",
-    "useCases": "controller",
-    "kafka": "scripts",
-    "mappers": "meta",
-    "_shared": "shared",
-    "eslint-config": "tools",
-    "kube": "kubernetes"
-  },
   "explorer.compactFolders": false,
 
   "extensions.ignoreRecommendations": true,
   "editor.suggestSelection": "first",
   "editor.bracketPairColorization.enabled": true,
-  "omnisharp.enableImportCompletion": true,
+  "git.autofetch": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": -1
+  "editor.stickyScroll.enabled": true,
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  }
 }
