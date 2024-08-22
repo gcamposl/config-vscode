@@ -1,4 +1,21 @@
 {
+  // terminal and workbench
+  "terminal.integrated.fontSize": 14,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.compactFolders": false,
+  "extensions.ignoreRecommendations": true,
+  "editor.suggestSelection": "first",
+  "editor.bracketPairColorization.enabled": true,
+  "git.autofetch": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+ 
+  // fonts
+  "editor.accessibilitySupport": "off",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 26,
+
   // files exlude
   "files.exclude": {
     "out": true, // set this to true to hide the "out" folder with the compiled JS files
@@ -34,27 +51,6 @@
     "editor.semanticHighlighting.enabled": false
   },
 
-  // python
-  "python.linting.enabled": false,
-  "python.formatting.provider": "black",
-  "python.linting.mypyEnabled": true,
-  "python.linting.flake8Enabled": false,
-  "python.testing.unittestEnabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.languageServer": "Pylance",
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.formatOnType": true
-  },
-  "python.linting.flake8Args": [
-    // Match what black does.
-    "--max-line-length=90"
-  ],
-
   // typescript
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "never",
@@ -86,6 +82,11 @@
     "javascript": "jsx"
   },
 
+  // format JS and TS
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+  },
+
   // GO
   "[go]": {
     "editor.formatOnSave": true,
@@ -111,36 +112,4 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-
-  // terminal and workbench
-  "terminal.integrated.fontSize": 14,
-  "workbench.startupEditor": "newUntitledFile",
-
-  // fonts
-  "editor.accessibilitySupport": "off",
-  "editor.fontSize": 16,
-  "editor.lineHeight": 26,
-  
-  // semantic highlighting
-  "editor.semanticHighlighting.enabled": true,
-
-  // format JS and TS
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-
-  "explorer.compactFolders": false,
-
-  "extensions.ignoreRecommendations": true,
-  "editor.suggestSelection": "first",
-  "editor.bracketPairColorization.enabled": true,
-  "git.autofetch": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.stickyScroll.enabled": true,
-  "accessibility.signals.lineHasError": {
-    "sound": "off"
-  }
 }
